@@ -1,0 +1,53 @@
+/* styles.css */
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* make body take up full height of screen */
+  margin: 0; /* remove default margin */
+}
+
+main {
+  flex: 1;
+  margin-bottom: 12%;
+  margin-top: 12%;
+}
+
+/* Centering .container */
+.container {
+  /* Center the content container */
+  text-align: center; /* Optional: Center text within the content */
+  padding: 20px; /* Add padding for better spacing */
+  max-width: 600px; /* Example maximum width */
+  width: 100%;
+  margin: auto; /* Center horizontally */
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 10px;
+  text-align: center;
+  color: #333;
+}
+
+h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+#output {
+  margin-top: 20px;
+}
+
+#output a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #337ab7;
+}
+
+#output a:hover {
+  color: #23527c;
+}

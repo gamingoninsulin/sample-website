@@ -1,0 +1,58 @@
+/* styles-footer.css */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  position: relative;
+}
+footer p {
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+.table-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table-container th,
+.table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-container th {
+  background-color: lightskyblue;
+  color: #000;
+}
+
+.table-container td {
+  color: white;
+}
+
+.table-container a {
+  color: white;
+}
+
+li {
+  color: white;
+}
+
+.github-repos {
+  color: white;
+}

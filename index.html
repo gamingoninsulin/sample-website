@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About This Project</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous" />
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="./data/css/styles-index.css" />
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <!-- This will load navbar.html -->
+
+    <div class="container mt-4">
+      <h1 class="text-center mb-4">About This Project</h1>
+      <article>
+        <h2>About This Project</h2>
+        <p>
+          This project is a hobbyist development effort by a passionate
+          developer and gamer, exploring various technologies and tools to
+          enhance skills and create practical applications. This project
+          utilizes
+          <strong>VSCode</strong> as the primary code editor, and is powered by
+          <strong>Blackbox AI</strong> to provide intelligent responses and
+          assistance.
+        </p>
+      </article>
+      <br />
+      <article>
+        <h3>Key Features:</h3>
+        <p>
+          This project features a <strong>full converter</strong> that allows
+          users to convert various image formats using JavaScript and libraries
+          like JSZip, without requiring login or registration. The project is
+          built using <strong>Bootstrap</strong> for responsive and modern UI
+          design, ensuring compatibility across different devices and browsers.
+          Additionally, this project is <strong>built with AI</strong> using
+          Blackbox AI.
+        </p>
+      </article>
+      <br />
+      <article>
+        <h3>About Blackbox AI</h3>
+        <p>
+          Blackbox AI is a cutting-edge artificial intelligence platform that
+          enables developers to build and deploy AI-powered applications with
+          ease. With Blackbox AI, you can create intelligent systems that learn
+          from data, make predictions, and automate tasks, all without requiring
+          extensive machine learning expertise.
+        </p>
+        <br />
+        <h4>Benefits of Using Blackbox AI</h4>
+        <p>
+          <strong>Faster Development:</strong> Blackbox AI provides a range of
+          pre-built AI models and tools that enable you to develop AI-powered
+          applications quickly and efficiently.
+        </p>
+        <p>
+          <strong>Increased Accuracy:</strong> Blackbox AI's advanced algorithms
+          and machine learning capabilities ensure that your applications make
+          accurate predictions and decisions.
+        </p>
+        <p>
+          <strong>Scalability:</strong> Blackbox AI is designed to handle large
+          volumes of data and scale with your application, ensuring that your
+          system remains efficient and effective.
+        </p>
+        <p>
+          <strong>Cost-Effective:</strong> By leveraging Blackbox AI, you can
+          reduce the costs associated with developing and maintaining AI-powered
+          applications.
+        </p>
+        <p>
+          To learn more about Blackbox AI and its capabilities, click the link
+          below to visit their website.
+        </p>
+        <a href="https://blackbox.ai" target="_blank"
+          ><img
+            src="./data/img/blackboxai.png"
+            width="20"
+            height="20"
+            alt="logo of blakbox.ai" />
+          Blackbox AI</a
+        >
+      </article>
+    </div>
+
+    <br />
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS and any custom JS (if needed) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-xxx"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-xxx"
+      crossorigin="anonymous"></script>
+    <!-- Script to load external HTML content -->
+    <script>
+      function loadHTML(elementId, filePath) {
+        fetch(filePath)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          });
+      }
+
+      // Load navbar and footer
+      loadHTML("navbar-container", "./data/html/navbar.html");
+      loadHTML("footer-container", "./data/html/footer.html");
+    </script>
+  </body>
+</html>

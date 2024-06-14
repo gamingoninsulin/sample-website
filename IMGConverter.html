@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous" />
+    <!-- Your existing CSS files -->
+    <link rel="stylesheet" href="./data/css/styles-IMGConverter.css" />
+    <!-- Favicon and other icons -->
+    <link rel="icon" href="./data/img/favicon.ico" type="image/x-icon" />
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./data/img/apple-touch-icon.png" />
+    <!-- Android Icons -->
+    <link rel="icon" sizes="192x192" href="./data/img/android-192x192.png" />
+    <link rel="icon" sizes="512x512" href="./data/img/android-512x512.png" />
+    <!-- Other favicon sizes -->
+    <link rel="icon" sizes="16x16" href="./data/img/favicon-16x16.png" />
+    <link rel="icon" sizes="32x32" href="./data/img/favicon-32x32.png" />
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="./data/img/site.webmanifest" />
+    <title>Image Converter</title>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <!-- This will load navbar.html -->
+    <div class="container-fluid bg-primary">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-auto">
+          <img src="./data/img/convertion.png" alt="logo" class="img-fluid" />
+        </div>
+        <div class="col-md-auto">
+          <h1 class="text-center mt-4 mb-4">Image Converter</h1>
+        </div>
+      </div>
+      <br />
+    </div>
+    <main>
+      <div class="container mt-4">
+        <form>
+          <div class="form-group">
+            <label for="file-input">Choose File(s):</label>
+            <input
+              type="file"
+              class="form-control-file"
+              id="file-input"
+              multiple />
+          </div>
+          <div class="form-group">
+            <label for="format-select">Select Format:</label>
+            <select id="format-select" class="form-control">
+              <option value="">Select format</option>
+              <option value="jpg">JPG</option>
+              <option value="jpeg">JPEG</option>
+              <option value="png">PNG</option>
+              <option value="webp">WebP</option>
+              <option value="bmp">BMP</option>
+              <option value="eps">EPS</option>
+              <option value="gif">GIF</option>
+              <option value="ico">ICO</option>
+              <option value="odd">ODD</option>
+              <option value="psd">PSD</option>
+              <option value="svg">SVG</option>
+              <option value="tga">TGA</option>
+              <option value="tiff">TIFF</option>
+            </select>
+          </div>
+          <button type="button" id="convert-btn" class="btn btn-primary">
+            Convert
+          </button>
+        </form>
+        <div id="output"></div>
+        <div id="status"></div>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS and your custom JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-xxx"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-xxx"
+      crossorigin="anonymous"></script>
+
+    <!-- Your custom scripts -->
+    <script src="./data/js/jszip.js"></script>
+    <script src="./data/js/index.js"></script>
+
+    <!-- Script to load external HTML content -->
+    <script>
+      function loadHTML(elementId, filePath) {
+        fetch(filePath)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          });
+      }
+
+      // Load navbar and footer
+      loadHTML("navbar-container", "./data/html/navbar.html");
+      loadHTML("footer-container", "./data/html/footer.html");
+    </script>
+  </body>
+</html>

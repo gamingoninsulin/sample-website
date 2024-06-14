@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About GamingOnInsulin</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous" />
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="./data/css/styles-about.css" />
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <!-- This will load navbar.html -->
+
+    <div class="container mt-4">
+      <h1 class="text-center mb-4">About GamingOnInsulin</h1>
+      <article>
+        <h2>About GamingOnInsulin</h2>
+        <p>
+          GamingOnInsulin is a hobbyist development effort by a passionate
+          developer and gamer, exploring various technologies and tools to
+          enhance skills and create practical applications. This project
+          utilizes
+          <strong>VSCode</strong> as the primary code editor, and is powered by
+          <strong>Blackbox AI</strong> to provide intelligent responses and
+          assistance.
+        </p>
+      </article>
+      <br />
+      <article>
+        <h3>Who is GamingOnInsulin?</h3>
+        <p>
+          GamingOnInsulin is a pseudonym for a developer and gamer who is
+          passionate about exploring new technologies and tools. With a
+          background in software development and a love for gaming,
+          GamingOnInsulin creates projects that combine these interests in
+          unique and practical ways.
+        </p>
+      </article>
+      <br />
+      <article>
+        <h3>Projects</h3>
+        <p>
+          GamingOnInsulin has created a variety of projects, including the Image
+          Converter project featured on this website. These projects are
+          designed to be practical and useful, while also showcasing the
+          capabilities of various technologies and tools.
+        </p>
+      </article>
+      <br />
+      <article>
+        <h3>Contact</h3>
+        <p>
+          If you have any questions or comments about GamingOnInsulin or any of
+          the projects featured on this website, please feel free to contact us.
+          We welcome feedback and are always looking for ways to improve our
+          projects and skills.
+        </p>
+      </article>
+    </div>
+
+    <br />
+    <div id="footer-container"></div>
+
+    <!-- Bootstrap JS and any custom JS (if needed) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-xxx"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-xxx"
+      crossorigin="anonymous"></script>
+    <!-- Script to load external HTML content -->
+    <script>
+      function loadHTML(elementId, filePath) {
+        fetch(filePath)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          });
+      }
+
+      // Load navbar and footer
+      loadHTML("navbar-container", "./data/html/navbar.html");
+      loadHTML("footer-container", "./data/html/footer.html");
+    </script>
+  </body>
+</html>
