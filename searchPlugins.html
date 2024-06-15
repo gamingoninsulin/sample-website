@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About This Project</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous" />
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="./data/css/styles-searchPlugin.css" />
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <!-- This will load navbar.html -->
+
+    <div class="container mt-4">
+      <h1>Minecraft Plugin Search</h1>
+    <div id="search-bar">
+      <input type="text" id="search-field" placeholder="Search Plugins" />
+      <button id="search-button">Search</button>
+      <button id="reset-button">Reset</button>
+    </div>
+
+    <div id="search-results">
+      <table id="plugin-table">
+        <tr>
+          <th>Image</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Author</th>
+          <th>Supported Versions</th>
+          <th>Download</th>
+        </tr>
+        <tbody id="plugin-table-body">
+          <!-- plugins will be displayed here -->
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <br />
+    <div id="footer-container"></div>
+    <!-- Custom JS -->
+      <script src="./data/js/searchPlugin.js"></script>
+    <!-- Bootstrap JS and any custom JS (if needed) -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+      integrity="sha384-xxx"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-xxx"
+      crossorigin="anonymous"></script>
+    <!-- Script to load external HTML content -->
+    <script>
+      function loadHTML(elementId, filePath) {
+        fetch(filePath)
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById(elementId).innerHTML = data;
+          });
+      }
+
+      // Load navbar and footer
+      loadHTML("navbar-container", "./data/html/navbar.html");
+      loadHTML("footer-container", "./data/html/footer.html");
+    </script>
+  </body>
+</html>
