@@ -1,33 +1,94 @@
 /* styles-navbar.css */
 
-/* Updated styles for Bootstrap navbar */
+/* General Navbar Styles */
 nav {
-  background-color: #333;
-  overflow: hidden;
-  position: fixed; /* Fixed position to stick to the top */
-  width: 100%; /* Full width */
-  top: 0; /* Stick to the top of the viewport */
-  z-index: 1000; /* Ensure it's above other content */
+    background-color: #333;
+    overflow: hidden;
+    position: fixed; /* Fixed position to stick to the top */
+    width: 100%; /* Full width */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+    height: 50px; /* Set a fixed height for the navbar */
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Space between logo and toggle button */
+}
+
+nav .navbar-brand img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Center the image horizontally */
+    width: 50px; /* Adjust the image width as needed */
+    height: 50px; /* Adjust the image height as needed */
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li {
-  float: left;
+    float: left;
 }
 
 nav ul li a {
-  display: block;
-  color: white; /* Set text color to white */
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white; /* Set text color to white */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 nav ul li a:hover {
-  background-color: lightskyblue; /* Darken the background on hover */
+    background-color: lightskyblue; /* Darken the background on hover */
+}
+
+/* Styles for smaller devices */
+@media (max-width: 768px) {
+    nav .navbar-nav {
+        position: fixed;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease; /* Add a smooth transition for height */
+        background-color: #333;
+        flex-direction: column;
+        padding-top: 50px; /* Adjust padding to account for image height */
+    }
+
+    nav .navbar-nav.show {
+        height: auto; /* Expand the menu height on show */
+    }
+
+    nav .navbar-nav li {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .navbar-nav li a {
+        display: block;
+        padding: 15px 0;
+        color: white;
+    }
+
+    nav .my-toggler {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: rotate(0deg); /* Initial rotation */
+        transition: transform 0.5s ease; /* Add a smooth transition for rotation */
+    }
+
+    nav .my-toggler.show {
+        transform: rotate(90deg); /* Rotate the button on show */
+    }
+
+    nav .my-toggler.show ~ .navbar-nav {
+        height: auto; /* Expand the menu when the button is rotated */
+    }
 }
